@@ -47,5 +47,7 @@ IBAN: GB33BUKB20201555555555
 then click on add benificiery CTA
 
 
-[Watch my video](recording.mov)
+[Watch project recording](recording.mov)
+
+If you are unable to see CLICK ON VIEW RAW and download the same
 
