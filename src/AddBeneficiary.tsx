@@ -48,25 +48,23 @@ const AddBeneficiary: React.FC<AddBeneficiaryProps> = ({
       [key]: value,
     });
   };
-
-  const handleSubmit = async () => {
-    const isBeneficiaryAlreadyExist = beneficiaries?.filter(
-      (incomingBeneficiary) => incomingBeneficiary?.iban === form.iban
+const handleSubmit = async () => {
+    const existingBeneficiary = beneficiaries.find(
+      (incomingBeneficiary) => incomingBeneficiary.iban === form?.iban
     );
-
-    if (isBeneficiaryAlreadyExist?.length) {
-      return setError("IBAN already exists");
+  
+    if (existingBeneficiary) {
+      setError("IBAN already exists");
+      return;
     }
-
-    
-    if (!isBeneficiaryAlreadyExist?.length && validateIban(form.iban)) {
-      const newBeneficiary = {
+  
+    if (validateIban(form.iban)) {
+      const newBeneficiary: Beneficiary = {
         firstName: form.firstName,
         lastName: form.lastName,
         iban: form.iban,
-        balance: 1000, 
+        balance: 1000,
       };
-
       await addBeneficiary(newBeneficiary);
       setForm({ firstName: "", lastName: "", iban: "" });
       setError("");
