@@ -24,19 +24,28 @@ React Navigation: For seamless navigation between screens.
 
 # HOW TO SETUP THIS PROJECT
 CLONE https://github.com/ajay17141994/Vearch.git
+
 Install Node if not on your system
+
 run yarn install (this will install all the dependencies mentioned over package.json)
+
 run yarn start (this will start your project with the help of EXPO)
+
 select i for IOS and a for ANDROID
+
 Now you will see Expo icon over screen just click and you are good to go :-)
+
 
 
 # DUMMY HELPING DATA
 FIRST NAME: ABHAY
+
 LAST NAME: KUMAR
+
 IBAN: GB33BUKB20201555555555
 
 then click on add benificiery CTA
+
 
 
 
