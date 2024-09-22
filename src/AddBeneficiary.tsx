@@ -49,10 +49,10 @@ const AddBeneficiary: React.FC<AddBeneficiaryProps> = ({
     });
   };
 const handleSubmit = async () => {
-    const existingBeneficiary = beneficiaries.find(
+    const storedBeneficiaries: Beneficiary[] = await loadBeneficiaries();
+    const existingBeneficiary = storedBeneficiaries.find(
       (incomingBeneficiary) => incomingBeneficiary.iban === form?.iban
     );
-  
     if (existingBeneficiary) {
       setError("IBAN already exists");
       return;
